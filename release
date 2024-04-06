@@ -1,0 +1,68 @@
+IMPLEMENTOR="Oracle Corporation"
+JAVA_RUNTIME_VERSION="22+36-2370"
+JAVA_VERSION="22"
+JAVA_VERSION_DATE="2024-03-19"
+LIBC="default"
+MODULES="java.base java.compiler java.datatransfer java.xml java.prefs java.desktop java.instrument java.logging java.management java.security.sasl java.naming java.rmi java.management.rmi java.net.http java.scripting java.security.jgss java.transaction.xa java.sql java.sql.rowset java.xml.crypto java.se java.smartcardio jdk.accessibility jdk.internal.jvmstat jdk.attach jdk.charsets jdk.internal.opt jdk.zipfs jdk.compiler jdk.crypto.cryptoki jdk.crypto.ec jdk.crypto.mscapi jdk.dynalink jdk.internal.ed jdk.editpad jdk.internal.vm.ci jdk.graal.compiler jdk.graal.compiler.management jdk.hotspot.agent jdk.httpserver jdk.incubator.vector jdk.internal.le jdk.jartool jdk.javadoc jdk.jcmd jdk.management jdk.management.agent jdk.jconsole jdk.jdeps jdk.jdwp.agent jdk.jdi jdk.jfr jdk.jlink jdk.jpackage jdk.jshell jdk.jsobject jdk.jstatd jdk.localedata jdk.management.jfr jdk.naming.dns jdk.naming.rmi jdk.net jdk.nio.mapmode jdk.random jdk.sctp jdk.security.auth jdk.security.jgss jdk.unsupported jdk.unsupported.desktop jdk.xml.dom"
+OS_ARCH="x86_64"
+OS_NAME="Windows"
+SOURCE=".:git:c67e8f502224 open:git:fe9f05023e5a"
+
+//Esta línea importa la clase Scanner del paquete java.util. Scanner es una clase que permite leer datos de entrada desde diferentes fuentes, como el teclado en este caso.
+import java.util.Scanner;
+
+//Esto define una clase llamada ProyectoS3.  
+//Una clase en Java es un conjunto de código que guarda datos (en forma de variables) y acciones (en forma de métodos)
+public class ProyectoS3 {
+
+	//Esta línea define el método main es el punto de entrada principal para ejecutar del programa
+	//Este método debe tener exactamente esta firma y se llama al ejecutar el programa
+	//Los parámetros de este método, String[] args son una matriz de cadenas que contienen datos pasados al programa desde los comandos
+    public static void main(String[] args) {
+
+	//Crea una instancia de la clase Scanner llamada scanner que está vinculada a la entrada del sistema (System.in)
+	//Esto permite que leer datos ingresados por el usuario desde la consola.
+        Scanner scanner = new Scanner(System.in);
+
+	//Imprime un mensaje en la consola solicitando al usuario que ingrese su nombre, apellido y luego su edad
+	System.out.println("Ingrese su nombre");
+	String nombre = scanner.nextLine();
+
+	System.out.println("Ingrese su apellido");
+	String apellido = scanner.nextLine();
+
+	System.out.println("Ingrese su edad");
+	int edad = scanner.nextInt();
+	scanner.nextLine(); // Consumir el carácter de nueva línea
+        
+	//Imprime un mensaje en la consola solicitando al usuario que ingrese la marca del vehiculo
+        System.out.println("Ingrese la marca del vehiculo:");
+	
+	//Lee la entrada del usuario (en este caso, marca del vehiculo) utilizando el objeto scanner y la almacena en la variable marca.
+        String marca = scanner.nextLine();
+        //Lee la entrada del usuario (en este caso, el modelo del vehiculo) utilizando el objeto scanner y la almacena en la variable marca.
+        System.out.println("Ingrese el modelo:");
+        String modelo = scanner.nextLine();
+        //Lee la entrada del usuario (en este caso, la cilindrada del vehiculo) utilizando el objeto scanner y la almacena en la variable marca.
+        System.out.println("Ingrese la cilindrada:");
+        String cilindrada = scanner.nextLine();
+        //Lee la entrada del usuario (en este caso, el tipo de combustible del vehiculo) utilizando el objeto scanner y la almacena en la variable marca.
+        System.out.println("Ingrese el tipo de combustible:");
+        String tipoCombustible = scanner.nextLine();
+        //Lee la entrada del usuario (en este caso, la cantidad de pasajeros por vehiculo) utilizando el objeto scanner y la almacena en la variable marca.
+        System.out.println("Ingrese la capacidad en pasajeros:");
+        int capacidadPasajeros = scanner.nextInt();
+        
+	//Las líneas restantes son parecidas y siguen el mismo patrón
+	//imprime un mensaje solicitando una entrada y luego lee los datos ingresados por el usuario utilizando "scanner"
+	//se imprimen los valores ingresados por el usuario: 
+       	System.out.println("La marca es: " + marca);
+	System.out.println("El modelo es: " + modelo);
+	System.out.println("La cilindrada que ha ingresad es: " + cilindrada);
+	System.out.println("El tipo de combustible es: " + tipoCombustible);
+	System.out.println("Tiene una capacidad de " + capacidadPasajeros + " pasajeros.");
+	
+	//libera los recursos para ser utilizados nuevamente.
+        scanner.close();
+    }
+}
